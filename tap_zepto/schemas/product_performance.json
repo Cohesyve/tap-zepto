@@ -1,0 +1,61 @@
+{
+    "type": "object",
+    "properties": {
+        "productVariantId": {
+            "type": ["string", "null"]
+        },
+        "skuName": {
+            "type": ["string", "null"]
+        },
+        "productName": {
+            "type": ["string", "null"]
+        },
+        "packSize": {
+            "type": ["string", "null"]
+        },
+        "unitOfMeasure": {
+            "type": ["string", "null"]
+        },
+        "categoryName": {
+            "type": ["string", "null"]
+        },
+        "subcategoryName": {
+            "type": ["string", "null"]
+        },
+        "salesContribution": {
+            "type": ["integer", "null"]
+        },
+        "availableStores": {
+            "type": ["number", "null"]
+        },
+        "gmv": {
+            "type": ["integer", "null"]
+        },
+        "stockOnHand": {
+            "type": ["integer", "null"]
+        },
+        "qtySold": {
+            "type": ["integer", "null"]
+        },
+        "weekOnWeekGrowth": {
+            "type": ["number", "null"]
+        },
+        "monthOnMonthGrowth": {
+            "type": ["number", "null"]
+        },
+        "viewAction": {
+            "type": ["number", "null"]
+        },
+        "actionOrder": {
+            "type": ["number", "null"]
+        },
+        "startDate": {
+            "type": ["string", "null"],
+            "format": "date-time"
+        },
+        "endDate": {
+            "type": ["string", "null"],
+            "format": "date-time"
+        }
+    }
+}

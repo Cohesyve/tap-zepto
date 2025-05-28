@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "categoryID": {
+            "type": ["string", "null"]
+        },
+        "categoryName": {
+            "type": ["string", "null"]
+        },
+        "subcategoryList": {
+            "type": ["array", "null"],
+            "items": {
+                "type": "object",
+                "properties": {
+                    "subcategoryID": {
+                        "type": ["string", "null"]
+                    },
+                    "subcategoryName": {
+                        "type": ["string", "null"]
+                    }
+                }
+            }
+        }
+    }
+}

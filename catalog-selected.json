@@ -1,0 +1,1141 @@
+{
+  "streams": [
+    {
+      "tap_stream_id": "cities",
+      "stream": "cities",
+      "key_properties": [
+        "cityID"
+      ],
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cityID": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "cityName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "replication-method": "FULL_TABLE"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "cityID"
+          ],
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "cityName"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "category_mapping",
+      "stream": "category_mapping",
+      "key_properties": [
+        "categoryId"
+      ],
+      "schema": {
+        "type": "object",
+        "properties": {
+          "categoryID": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "categoryName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "subcategoryList": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "object",
+              "properties": {
+                "subcategoryID": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "subcategoryName": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "replication-method": "FULL_TABLE"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "categoryID"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "categoryName"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subcategoryList"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "brands",
+      "stream": "brands",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "isAdvertiser": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "parentBrandId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "replication-method": "FULL_TABLE"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "isAdvertiser"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "type"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "parentBrandId"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "products",
+      "stream": "products",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "concat_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "override_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "unit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "brand": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "related_brand": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "id": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "display_name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "related_display_brand": {
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "type": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "id": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "display_type": {
+            "type": [
+              "null",
+              "object"
+            ]
+          },
+          "variant": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "inventory_limit": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "price": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "image_url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "large_image_url": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sliding_images": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "image_path": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "png_image_path": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "sort_order": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "asset_type": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "video_auto_play": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "video_path": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "priority": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "is_png_transparent": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": false,
+            "replication-method": "FULL_TABLE"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "concat_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "override_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "unit"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "brand"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "related_brand"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "related_display_brand"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "display_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "variant"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "inventory_limit"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "price"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "image_url"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "large_image_url"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "sliding_images"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "sponsored_sov",
+      "stream": "sponsored_sov",
+      "key_properties": [
+        "keyword"
+      ],
+      "schema": {
+        "type": [
+          "null",
+          "object"
+        ],
+        "properties": {
+          "keyword": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "monthly_searches": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "sov": {
+            "type": [
+              "null",
+              "number"
+            ]
+          }
+        }
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": false,
+            "replication-method": "FULL_TABLE"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "keyword"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "monthly_searches"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "sov"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "campaign_keyword_performance",
+      "stream": "campaign_keyword_performance",
+      "key_properties": [
+        "keyword"
+      ],
+      "schema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "The keyword."
+          },
+          "bid_range": {
+            "type": "object",
+            "properties": {
+              "exact_match": {
+                "type": "object",
+                "properties": {
+                  "min": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "description": "The minimum bid for exact match."
+                  },
+                  "max": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "description": "The maximum bid for exact match."
+                  },
+                  "suggested_min": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "description": "The suggested minimum bid for exact match."
+                  },
+                  "suggested_max": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "description": "The suggested maximum bid for exact match."
+                  },
+                  "min_for_boost": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "description": "The minimum bid for boost for exact match."
+                  }
+                }
+              },
+              "smart_match": {
+                "type": "object",
+                "properties": {
+                  "min": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "description": "The minimum bid for smart match."
+                  },
+                  "max": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "description": "The maximum bid for smart match."
+                  },
+                  "suggested_min": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "description": "The suggested minimum bid for smart match."
+                  },
+                  "suggested_max": {
+                    "type": [
+                      "null",
+                      "integer"
+                    ],
+                    "description": "The suggested maximum bid for smart match."
+                  }
+                }
+              }
+            }
+          },
+          "keyword_searches": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "description": "The number of keyword searches."
+          },
+          "nkr_keywords": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {},
+            "description": "Array of nkr keywords"
+          }
+        }
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": false,
+            "replication-method": "FULL_TABLE"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "keyword"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "bid_range"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "keyword_searches"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "nkr_keywords"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    },
+    {
+      "tap_stream_id": "product_performance",
+      "stream": "product_performance",
+      "key_properties": [
+        "productVariantId",
+        "startDate",
+        "endDate"
+      ],
+      "schema": {
+        "type": "object",
+        "properties": {
+          "productVariantId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "skuName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "productName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "packSize": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "unitOfMeasure": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "categoryName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "subcategoryName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "salesContribution": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "availableStores": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "gmv": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "stockOnHand": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "qtySold": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "weekOnWeekGrowth": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "monthOnMonthGrowth": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "viewAction": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "actionOrder": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "startDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        }
+      },
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true,
+            "replication-method": "FULL_TABLE"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "productVariantId"
+          ],
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "skuName"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "productName"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "packSize"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "unitOfMeasure"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "categoryName"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "subcategoryName"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "salesContribution"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "availableStores"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "gmv"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "stockOnHand"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "qtySold"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "weekOnWeekGrowth"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "monthOnMonthGrowth"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "viewAction"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "actionOrder"
+          ],
+          "metadata": {
+            "inclusion": "available",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "startDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "endDate"
+          ],
+          "metadata": {
+            "inclusion": "automatic",
+            "selected": true
+          }
+        }
+      ]
+    }
+  ]
+}

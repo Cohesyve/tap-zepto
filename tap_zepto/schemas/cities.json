@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "properties": {
+        "cityID": {
+            "type": ["string", "null"]
+        },
+        "cityName": {
+            "type": ["string", "null"]
+        }
+    }
+}
