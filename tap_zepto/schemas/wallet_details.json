@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+      "start_date": {
+        "type": ["string", "null"]
+      },
+      "end_date": {
+        "type": ["string", "null"]
+      },
+      "all_brands": {
+        "type": ["boolean", "null"]
+      },
+      "brand_ids": {
+        "type": ["string", "null"]
+      }
+    }
+  }
+  

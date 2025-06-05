@@ -1,0 +1,64 @@
+{
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": ["string", "null"]
+      },
+      "brand_id": {
+        "type": ["string", "null"]
+      },
+      "brand_name": {
+        "type": ["string", "null"]
+      },
+      "type": {
+        "type": ["string", "null"]
+      },
+      "subtype": {
+        "type": ["string", "null"]
+      },
+      "meta": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": ["string", "null"]
+          }
+        },
+        "required": ["description"]
+      },
+      "created_at": {
+        "type": ["string", "null"],
+        "format": "date-time"
+      },
+      "updated_at": {
+        "type": ["string", "null"],
+        "format": "date-time"
+      },
+      "amount": {
+        "type": ["number", "null"]
+      },
+      "currency": {
+        "type": ["string", "null"]
+      },
+      "status": {
+        "type": ["string", "null"]
+      },
+      "created_by": {
+        "type": ["string", "null"]
+      }
+    },
+    "required": [
+      "id",
+      "brand_id",
+      "brand_name",
+      "type",
+      "subtype",
+      "meta",
+      "created_at",
+      "updated_at",
+      "amount",
+      "currency",
+      "status",
+      "created_by"
+    ]
+  }
+  

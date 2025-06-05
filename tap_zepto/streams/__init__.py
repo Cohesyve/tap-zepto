@@ -6,23 +6,33 @@ from tap_zepto.streams.brands import BrandsStream
 from tap_zepto.streams.products import ProductsStream
 from tap_zepto.streams.sponsored_sov import SponsoredSOVStream
 from tap_zepto.streams.campaign_keyword_performance import CampaignKeywordPerformanceStream
+from tap_zepto.streams.campaigns import CampaignStream
+from tap_zepto.streams.transactions import TransactionStream
+from tap_zepto.streams.wallet_details import WalletStream
+from tap_zepto.streams.top_searched_keywords import TopSearchedStream
+
 
 AVAILABLE_STREAMS = [
     CitiesStream,
     CategoryMappingStream,
     BrandsStream,
-    ProductsStream,
-    SponsoredSOVStream,
     CampaignKeywordPerformanceStream,
-    ProductPerformanceStream
+    ProductPerformanceStream,
+    CampaignStream,
+    TransactionStream,
+    WalletStream,
+    TopSearchedStream
 ]
 
 __all__ = [
     'CitiesStream',
     'CategoryMappingStream',
     'BrandsStream',
-    'ProductsStream',
     'SponsoredSOVStream',
     'CampaignKeywordPerformanceStream',
-    'ProductPerformanceStream'
+    'ProductPerformanceStream',
+    'CampaignStream',
+    'TransactionStream',
+    'WalletStream',
+    'TopSearchedStream'
 ]

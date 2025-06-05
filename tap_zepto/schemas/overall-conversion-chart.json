@@ -1,0 +1,16 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "key": { "type": "string" }
+    },
+    "patternProperties": {
+      "^(?!key$).*": {
+        "type": ["number", "null","string"]
+      }
+    },
+    "required": ["key"],
+    "additionalProperties": true
+  }
+}

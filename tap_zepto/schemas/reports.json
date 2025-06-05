@@ -1,0 +1,45 @@
+// confirm this 
+
+{
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": ["string", "null"]
+      },
+      "brand_id": {
+        "type": ["string", "null"]
+      },
+      "status": {
+        "type": ["string", "null"]
+      },
+      "requested_by": {
+        "type": ["string", "null"],
+        "format": "email"
+      },
+      "requested_at": {
+        "type": ["string", "null"],
+        "format": "date-time"
+      },
+      "updated_at": {
+        "type": ["string", "null"],
+        "format": "date-time"
+      },
+      "download_file": {
+        "type": ["string", "null"]
+      },
+      "type": {
+        "type": ["string", "null"]
+      }
+    },
+    "required": [
+      "id",
+      "brand_id",
+      "status",
+      "requested_by",
+      "requested_at",
+      "updated_at",
+      "download_file",
+      "type"
+    ]
+  }
+  
