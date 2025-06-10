@@ -12,16 +12,16 @@ from datetime import datetime, timedelta, date # Added date
 
 LOGGER = singer.get_logger()
 
-class OverallConversionStream(BaseStream):
+class ActionToPurchase(BaseStream):
     API_METHOD = 'GET'
-    TABLE = 'overall_conversion'
+    TABLE = 'action_to_purchase'
     KEY_PROPERTIES = [ 'yaxisvalue']
     REPLICATION_METHOD = 'INCREMENTAL'
     REPLICATION_KEY = 'start_date'
 
     @property
     def api_path(self):
-        return '/brand-analytics-web/api/v1/market-share/gmv-and-units'
+        return '/brand-analytics-web/api/v1/kyc/action-to-purchase'
     
 
     def get_headers(self):
@@ -87,19 +87,19 @@ class OverallConversionStream(BaseStream):
             "startDate":from_date_str,
             "endDate":to_date_str,
             "viewType":"SUBCATEGORY",
-            "aggregationLevel":"WEEK"
+            "aggregationLevel":"DAY"
         }
 
 
   
     def get_stream_data(self, result):
 
-        dataConfig = result['data']['metrics']['marketShareGMV']['dataConfig']
+        dataConfig = result['data']['metrics']['actionToPurchase']['dataConfig']
         # dataConfig = data['data']['metrics']['marketShareGMV']['dataConfig']
         yAxis =dataConfig['yAxis']
         xAxis =dataConfig['xAxis']
 
-        graphData = result['data']['metrics']['marketShareGMV']['data']
+        graphData = result['data']['metrics']['actionToPurchase']['data']
 
         finalData=[]
 

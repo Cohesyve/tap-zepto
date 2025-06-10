@@ -9,7 +9,11 @@ from tap_zepto.streams.campaign_keyword_performance import CampaignKeywordPerfor
 from tap_zepto.streams.campaigns import CampaignStream
 from tap_zepto.streams.transactions import TransactionStream
 from tap_zepto.streams.wallet_details import WalletStream
+from tap_zepto.streams.reports import ReportStream
 from tap_zepto.streams.top_searched_keywords import TopSearchedStream
+from tap_zepto.streams.overall_conversion_chart import OverallConversionStream
+from tap_zepto.streams.action_to_purchase import ActionToPurchase
+
 
 
 AVAILABLE_STREAMS = [
@@ -21,7 +25,11 @@ AVAILABLE_STREAMS = [
     CampaignStream,
     TransactionStream,
     WalletStream,
-    TopSearchedStream
+    ReportStream,
+    
+    # OverallConversionStream,
+    # ActionToPurchase
+    # TopSearchedStream
 ]
 
 __all__ = [
@@ -34,5 +42,8 @@ __all__ = [
     'CampaignStream',
     'TransactionStream',
     'WalletStream',
-    'TopSearchedStream'
+    "ReportStream"
+    # 'OverallConversionStream',
+    # 'ActionToPurchase'
+    # 'TopSearchedStream'
 ]

@@ -53,10 +53,22 @@ class BaseStream(base):
         params = self.get_params()
         body = self.get_body()
 
-        headers = ({key: value for key, value in {
+
+        headers = self.get_headers() or {}
+
+        # Only update if the value is truthy (not None, not empty string, etc.)
+        update_headers = {
             'Accept': self.ACCEPT,
             'Content-Type': self.CONTENT_TYPE,
-        }.items() if value}) or None
+        }
+        headers.update({k: v for k, v in update_headers.items() if v})
+
+
+
+        # headers = ({key: value for key, value in {
+        #     'Accept': self.ACCEPT,
+        #     'Content-Type': self.CONTENT_TYPE,
+        # }.items() if value}) or None
 
         client: ZeptoClient = self.client
 
