@@ -55,7 +55,7 @@ class ProductPerformanceStream(ChildStream):
             # last_sync_date_obj is a datetime.date object from state.py
             sync_start_date = last_sync_date_obj + timedelta(days=1)
         else:
-            sync_start_date = datetime.strptime(from_date_str, '%Y-%m-%d').date()  # Parse initial start date
+            sync_start_date = datetime.strptime(from_date_str, '%Y-%m-%dT%H:%M:%SZ').date()  # Parse initial start date
 
         today = date.today()
         sync_end_date = sync_start_date + timedelta(days=180)
