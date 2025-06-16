@@ -8,13 +8,9 @@ import json
 import time
 import os
 import re
-from dotenv import load_dotenv
 import base64
 
 LOGGER = singer.get_logger()  # noqa
-
-# Load environment variables from .env file
-load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
 
 class ZeptoClient:
 
