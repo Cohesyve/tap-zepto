@@ -7,10 +7,6 @@ from datetime import datetime, timedelta, date # Added date
 
 
 import singer
-import json
-import pandas as pd
-import io
-import requests
 
 LOGGER = singer.get_logger()  # noqa
 

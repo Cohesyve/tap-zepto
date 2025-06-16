@@ -3,14 +3,8 @@ from tap_zepto.streams.base import ChildStream
 from tap_zepto.cache import stream_cache
 
 from tap_zepto.state import (get_last_record_value_for_table)
-from datetime import datetime, timedelta, date # Added date
-
 
 import singer
-import json
-import pandas as pd
-import io
-import requests
 
 LOGGER = singer.get_logger()  # noqa
 
