@@ -1,0 +1,81 @@
+{
+    "type": "object",
+    "properties": {
+      "name_with_active_status": {
+        "type": "object",
+        "properties": {
+          "campaign_name": {
+            "type": ["string", "null"]
+          },
+          "is_active": {
+            "type": ["boolean", "null"]
+          }
+        },
+        "required": ["campaign_name", "is_active"]
+      },
+      "brand_id": {
+        "type": ["string", "null"]
+      },
+      "brand_name": {
+        "type": ["string", "null"]
+      },
+      "campaign_type": {
+        "type": ["string", "null"]
+      },
+      "campaign_sub_type": {
+        "type": ["string", "null"]
+      },
+      "daily_budget": {
+        "type": ["string", "null"]
+      },
+      "bid_targeting_type": {
+        "type": ["string", "null"]
+      },
+      "status": {
+        "type": ["string", "null"]
+      },
+      "utp_status": {
+        "type": ["string", "null"]
+      },
+      "spend": {
+        "type": ["string", "null"]
+      },
+      "impressions": {
+        "type": ["string", "null"]
+      },
+      "ecpm": {
+        "type": ["string", "null"]
+      },
+      "roi": {
+        "type": ["string", "null"]
+      },
+      "clicks": {
+        "type": ["string", "null"]
+      },
+      "cpc": {
+        "type": ["string", "null"]
+      },
+      "lifetime_budget": {
+        "type": ["string", "null"]
+      },
+      "start_date": {
+        "type": ["string", "null"],
+        "format": "date-time"
+      },
+      "end_date": {
+        "type": ["string", "null"]
+      },
+      "base_bid": {
+        "type": ["string", "null"]
+      },
+      "campaign_id": {
+        "type": ["integer", "null"]
+      },
+      "created_on": {
+        "type": ["string", "null"],
+        "format": "date-time"
+      }
+    },
+    "required": ["name_with_active_status", "brand_id", "campaign_id", "created_on"]
+  }
+  

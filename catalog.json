@@ -228,427 +228,6 @@
             ]
         },
         {
-            "tap_stream_id": "products",
-            "stream": "products",
-            "key_properties": [
-                "id"
-            ],
-            "schema": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "type": [
-                            "integer",
-                            "null"
-                        ]
-                    },
-                    "name": {
-                        "type": [
-                            "string",
-                            "null"
-                        ]
-                    },
-                    "concat_name": {
-                        "type": [
-                            "string",
-                            "null"
-                        ]
-                    },
-                    "override_name": {
-                        "type": [
-                            "string",
-                            "null"
-                        ]
-                    },
-                    "unit": {
-                        "type": [
-                            "string",
-                            "null"
-                        ]
-                    },
-                    "brand": {
-                        "type": [
-                            "string",
-                            "null"
-                        ]
-                    },
-                    "related_brand": {
-                        "type": [
-                            "object",
-                            "null"
-                        ],
-                        "properties": {
-                            "id": {
-                                "type": [
-                                    "integer",
-                                    "null"
-                                ]
-                            },
-                            "name": {
-                                "type": [
-                                    "string",
-                                    "null"
-                                ]
-                            },
-                            "display_name": {
-                                "type": [
-                                    "string",
-                                    "null"
-                                ]
-                            }
-                        }
-                    },
-                    "related_display_brand": {
-                        "type": [
-                            "null",
-                            "object"
-                        ]
-                    },
-                    "type": {
-                        "type": [
-                            "object",
-                            "null"
-                        ],
-                        "properties": {
-                            "id": {
-                                "type": [
-                                    "integer",
-                                    "null"
-                                ]
-                            },
-                            "name": {
-                                "type": [
-                                    "string",
-                                    "null"
-                                ]
-                            }
-                        }
-                    },
-                    "display_type": {
-                        "type": [
-                            "null",
-                            "object"
-                        ]
-                    },
-                    "variant": {
-                        "type": [
-                            "string",
-                            "null"
-                        ]
-                    },
-                    "inventory_limit": {
-                        "type": [
-                            "integer",
-                            "null"
-                        ]
-                    },
-                    "price": {
-                        "type": [
-                            "number",
-                            "null"
-                        ]
-                    },
-                    "image_url": {
-                        "type": [
-                            "string",
-                            "null"
-                        ]
-                    },
-                    "large_image_url": {
-                        "type": [
-                            "string",
-                            "null"
-                        ]
-                    },
-                    "sliding_images": {
-                        "type": [
-                            "array",
-                            "null"
-                        ],
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "id": {
-                                    "type": [
-                                        "integer",
-                                        "null"
-                                    ]
-                                },
-                                "image_path": {
-                                    "type": [
-                                        "string",
-                                        "null"
-                                    ]
-                                },
-                                "png_image_path": {
-                                    "type": [
-                                        "string",
-                                        "null"
-                                    ]
-                                },
-                                "sort_order": {
-                                    "type": [
-                                        "integer",
-                                        "null"
-                                    ]
-                                },
-                                "asset_type": {
-                                    "type": [
-                                        "string",
-                                        "null"
-                                    ]
-                                },
-                                "video_auto_play": {
-                                    "type": [
-                                        "boolean",
-                                        "null"
-                                    ]
-                                },
-                                "video_path": {
-                                    "type": [
-                                        "string",
-                                        "null"
-                                    ]
-                                },
-                                "priority": {
-                                    "type": [
-                                        "string",
-                                        "null"
-                                    ]
-                                },
-                                "is_png_transparent": {
-                                    "type": [
-                                        "boolean",
-                                        "null"
-                                    ]
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            "metadata": [
-                {
-                    "breadcrumb": [],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "id"
-                    ],
-                    "metadata": {
-                        "inclusion": "automatic"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "name"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "concat_name"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "override_name"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "unit"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "brand"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "related_brand"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "related_display_brand"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "type"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "display_type"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "variant"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "inventory_limit"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "price"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "image_url"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "large_image_url"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "sliding_images"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                }
-            ]
-        },
-        {
-            "tap_stream_id": "sponsored_sov",
-            "stream": "sponsored_sov",
-            "key_properties": [
-                "keyword"
-            ],
-            "schema": {
-                "type": [
-                    "null",
-                    "object"
-                ],
-                "properties": {
-                    "keyword": {
-                        "type": [
-                            "null",
-                            "string"
-                        ]
-                    },
-                    "monthly_searches": {
-                        "type": [
-                            "null",
-                            "integer"
-                        ]
-                    },
-                    "sov": {
-                        "type": [
-                            "null",
-                            "number"
-                        ]
-                    }
-                }
-            },
-            "metadata": [
-                {
-                    "breadcrumb": [],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "keyword"
-                    ],
-                    "metadata": {
-                        "inclusion": "automatic"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "monthly_searches"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                },
-                {
-                    "breadcrumb": [
-                        "properties",
-                        "sov"
-                    ],
-                    "metadata": {
-                        "inclusion": "available"
-                    }
-                }
-            ]
-        },
-        {
             "tap_stream_id": "campaign_keyword_performance",
             "stream": "campaign_keyword_performance",
             "key_properties": [
@@ -1091,6 +670,825 @@
                     ],
                     "metadata": {
                         "inclusion": "automatic"
+                    }
+                }
+            ]
+        },
+        {
+            "tap_stream_id": "campaigns",
+            "stream": "campaigns",
+            "key_properties": [
+                "campaign_id",
+                "start_date"
+            ],
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "name_with_active_status": {
+                        "type": "object",
+                        "properties": {
+                            "campaign_name": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "is_active": {
+                                "type": [
+                                    "boolean",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "campaign_name",
+                            "is_active"
+                        ]
+                    },
+                    "brand_id": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "brand_name": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "campaign_type": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "campaign_sub_type": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "daily_budget": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "bid_targeting_type": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "status": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "utp_status": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "spend": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "impressions": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "ecpm": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "roi": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "clicks": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "cpc": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "lifetime_budget": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "start_date": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "end_date": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "base_bid": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "campaign_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "created_on": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    }
+                },
+                "required": [
+                    "name_with_active_status",
+                    "brand_id",
+                    "campaign_id",
+                    "created_on"
+                ]
+            },
+            "metadata": [
+                {
+                    "breadcrumb": [],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "name_with_active_status"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "brand_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "brand_name"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "campaign_type"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "campaign_sub_type"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "daily_budget"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "bid_targeting_type"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "status"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "utp_status"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "spend"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "impressions"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "ecpm"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "roi"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "clicks"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "cpc"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "lifetime_budget"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "start_date"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "end_date"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "base_bid"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "campaign_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "created_on"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                }
+            ]
+        },
+        {
+            "tap_stream_id": "transactions",
+            "stream": "transactions",
+            "key_properties": [
+                "id",
+                "brand_id",
+                "created_at"
+            ],
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "brand_id": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "brand_name": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "type": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "subtype": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "meta": {
+                        "type": "object",
+                        "properties": {
+                            "description": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "description"
+                        ]
+                    },
+                    "created_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "amount": {
+                        "type": [
+                            "number",
+                            "null"
+                        ]
+                    },
+                    "currency": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "status": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "created_by": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "id",
+                    "brand_id",
+                    "brand_name",
+                    "type",
+                    "subtype",
+                    "meta",
+                    "created_at",
+                    "updated_at",
+                    "amount",
+                    "currency",
+                    "status",
+                    "created_by"
+                ]
+            },
+            "metadata": [
+                {
+                    "breadcrumb": [],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "brand_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "brand_name"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "type"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "subtype"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "meta"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "created_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "updated_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "amount"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "currency"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "status"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "created_by"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                }
+            ]
+        },
+        {
+            "tap_stream_id": "wallet_details",
+            "stream": "wallet_details",
+            "key_properties": [
+                "current_balance"
+            ],
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "start_date": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "end_date": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "all_brands": {
+                        "type": [
+                            "boolean",
+                            "null"
+                        ]
+                    },
+                    "brand_ids": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                }
+            },
+            "metadata": [
+                {
+                    "breadcrumb": [],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "start_date"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "end_date"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "all_brands"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "brand_ids"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                }
+            ]
+        },
+        {
+            "tap_stream_id": "report",
+            "stream": "report",
+            "key_properties": [
+                "brand_id",
+                "id"
+            ],
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "brand_id": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "status": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "requested_by": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "email"
+                    },
+                    "requested_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "download_file": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "type": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "id",
+                    "brand_id",
+                    "status",
+                    "requested_by",
+                    "requested_at",
+                    "updated_at",
+                    "download_file",
+                    "type"
+                ]
+            },
+            "metadata": [
+                {
+                    "breadcrumb": [],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "brand_id"
+                    ],
+                    "metadata": {
+                        "inclusion": "automatic"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "status"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "requested_by"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "requested_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "updated_at"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "download_file"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
+                    }
+                },
+                {
+                    "breadcrumb": [
+                        "properties",
+                        "type"
+                    ],
+                    "metadata": {
+                        "inclusion": "available"
                     }
                 }
             ]

@@ -1,0 +1,58 @@
+{
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object",
+        "properties": {
+          "campaign_categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "description": {
+                  "type": ["string", "null"]
+                },
+                "enabled": {
+                  "type": ["boolean", "null"]
+                },
+                "key": {
+                  "type": ["string", "null"]
+                },
+                "name": {
+                  "type": ["string", "null"]
+                },
+                "options": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "campaign_sub_type": {
+                        "type": ["string", "null"]
+                      },
+                      "campaign_type": {
+                        "type": ["string", "null"]
+                      },
+                      "description": {
+                        "type": ["string", "null"]
+                      },
+                      "enabled": {
+                        "type": ["boolean", "null"]
+                      },
+                      "name": {
+                        "type": ["string", "null"]
+                      }
+                    },
+                    "required": ["campaign_type", "description", "enabled", "name"]
+                  }
+                }
+              },
+              "required": ["description", "enabled", "key", "name", "options"]
+            }
+          }
+        },
+        "required": ["campaign_categories"]
+      }
+    },
+    "required": ["data"]
+  }
+  

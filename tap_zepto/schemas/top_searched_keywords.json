@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+      "searchTerm": {
+        "type": ["string", "null"]
+      },
+      "totalTraffic": {
+        "type": ["string", "null"]
+      },
+      "totalAtcs": {
+        "type": ["string", "null"]
+      },
+      "atcr": {
+        "type": ["string", "null"]
+      }
+    }
+  }
+  
