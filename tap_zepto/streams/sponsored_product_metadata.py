@@ -15,7 +15,7 @@ LOGGER = singer.get_logger()
 class NewUserStream(BaseStream):
     API_METHOD = 'GET'
     TABLE = 'new_user'
-    KEY_PROPERTIES = [ 'yaxisvalue']
+    KEY_PROPERTIES = [ 'xaxisvalue']
     REPLICATION_METHOD = 'INCREMENTAL'
     REPLICATION_KEY = 'start_date'
 
@@ -111,7 +111,7 @@ class NewUserStream(BaseStream):
 
             for y in yAxis:
                 yaxisLabel=y['key']
-                yaxisValue=node[yaxisLabel]
+                yaxisValue= node.get(yaxisLabel, 0)
                 finalData.append({
                 "xaxisvalue":xaxisValue ,
                 "xaxisLabel":xaxisLabel,
