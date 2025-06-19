@@ -12,16 +12,16 @@ from datetime import datetime, timedelta, date # Added date
 
 LOGGER = singer.get_logger()
 
-class OverallConversionStream(BaseStream):
+class NewUserStream(BaseStream):
     API_METHOD = 'GET'
-    TABLE = 'overall_conversion'
+    TABLE = 'new_user'
     KEY_PROPERTIES = [ 'yaxisvalue']
     REPLICATION_METHOD = 'INCREMENTAL'
     REPLICATION_KEY = 'start_date'
 
     @property
     def api_path(self):
-        return '/brand-analytics-web/api/v1/market-share/gmv-and-units'
+        return '/brand-analytics-web/api/v1/market-share/get-new-users-percentage'
     
 
     def get_headers(self):
@@ -91,7 +91,9 @@ class OverallConversionStream(BaseStream):
         }
 
 
-  
+#   
+# 
+# 
     def get_stream_data(self, result):
 
         dataConfig = result['data']['metrics']['marketShareGMV']['dataConfig']

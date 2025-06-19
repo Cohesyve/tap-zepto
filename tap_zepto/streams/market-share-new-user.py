@@ -21,7 +21,7 @@ class OverallConversionStream(BaseStream):
 
     @property
     def api_path(self):
-        return '/brand-analytics-web/api/v1/market-share/gmv-and-units'
+        return '/brand-analytics-web/api/v1/market-share/'
     
 
     def get_headers(self):

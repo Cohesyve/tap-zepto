@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+      "Sales Date": { "type": ["string", "null"] },
+      "SKU Name": { "type": ["string", "null"] },
+      "SKU ID": { "type": ["string", "null"] },
+      "EAN": { "type": ["string", "null"] },
+      "Vendor ID": { "type": ["string", "null"] },
+      "Vendor Name": { "type": ["string", "null"] },
+      "City": { "type": ["string", "null"] },
+      "Brand Name": { "type": ["string", "null"] },
+      "Manufacturer ID": { "type": ["string", "null"] },
+      "Manufacturer Name": { "type": ["string", "null"] },
+      "Store Name": { "type": ["string", "null"] },
+      "SKU Category": { "type": ["string", "null"] },
+      "Quantity": { "type": ["number", "null"] }
+    }
+  }
+  

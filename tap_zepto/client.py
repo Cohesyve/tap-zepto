@@ -14,7 +14,7 @@ LOGGER = singer.get_logger()  # noqa
 
 class ZeptoClient:
 
-    MAX_TRIES = 8
+    MAX_TRIES = 6
 
     def __init__(self, config):
         self.config = config

@@ -12,16 +12,16 @@ from datetime import datetime, timedelta, date # Added date
 
 LOGGER = singer.get_logger()
 
-class MarketShareStream(BaseStream):
+class SalesOverviewStream(BaseStream):
     API_METHOD = 'GET'
-    TABLE = 'overall_conversion'
+    TABLE = 'sales_overview'
     KEY_PROPERTIES = [ 'yaxisvalue']
     REPLICATION_METHOD = 'INCREMENTAL'
     REPLICATION_KEY = 'start_date'
 
     @property
     def api_path(self):
-        return '/brand-analytics-web/api/v1/market-share/gmv-and-units'
+        return '/brand-analytics-web/api/v1/sales-analytics/sales-overview'
     
 
     def get_headers(self):
@@ -86,7 +86,7 @@ class MarketShareStream(BaseStream):
             'cityIds': ','.join(city['cityID'] for city in stream_cache.get('cities', [])),
             "startDate":from_date_str,
             "endDate":to_date_str,
-            "viewType":"SUBCATEGORY",
+            "viewType":"BRAND",
             "aggregationLevel":"WEEK"
         }
 
@@ -94,12 +94,12 @@ class MarketShareStream(BaseStream):
   
     def get_stream_data(self, result):
 
-        dataConfig = result['data']['metrics']['marketShareGMV']['dataConfig']
+        dataConfig = result['data']['metrics']['gmv']['dataConfig']
         # dataConfig = data['data']['metrics']['marketShareGMV']['dataConfig']
         yAxis =dataConfig['yAxis']
         xAxis =dataConfig['xAxis']
 
-        graphData = result['data']['metrics']['marketShareGMV']['data']
+        graphData = result['data']['metrics']['gmv']['data']
 
         finalData=[]
 

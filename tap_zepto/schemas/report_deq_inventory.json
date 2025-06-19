@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+      "Date": { "type": ["string", "null"] },
+      "Brand Name": { "type": ["string", "null"] },
+      "Store Name": { "type": ["string", "null"] },
+      "City Name": { "type": ["string", "null"] },
+      "SKU": { "type": ["string", "null"] },
+      "SKU Name": { "type": ["string", "null"] },
+      "Category": { "type": ["string", "null"] },
+      "Subcategory": { "type": ["string", "null"] },
+      "Location Type": { "type": ["string", "null"] },
+      "Vendor Code": { "type": ["string", "null"] },
+      "Damaged Cost": { "type": ["number", "null"] },
+      "Expired Cost": { "type": ["number", "null"] },
+      "Quality Cost": { "type": ["number", "null"] },
+      "Damaged Qty": { "type": ["number", "null"] },
+      "Expired Qty": { "type": ["number", "null"] },
+      "Quality Qty": { "type": ["number", "null"] }
+    }
+  }
+  

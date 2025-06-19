@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+      "PO Date": { "type": ["string", "null"] },
+      "PO Code": { "type": ["string", "null"] },
+      "GRN Date": { "type": ["string", "null"] },
+      "Category Name": { "type": ["string", "null"] },
+      "Sub Category Name": { "type": ["string", "null"] },
+      "Vendor ID": { "type": ["string", "null"] },
+      "Brand Name": { "type": ["string", "null"] },
+      "SKU ID": { "type": ["string", "null"] },
+      "SKU Name": { "type": ["string", "null"] },
+      "City": { "type": ["string", "null"] },
+      "Warehouse Name": { "type": ["string", "null"] },
+      "Vendor Name": { "type": ["string", "null"] },
+      "Unit of Measure": { "type": ["string", "null"] },
+      "Packsize": { "type": ["string", "null"] },
+      "Manufacturer ID": { "type": ["string", "null"] },
+      "Manufacturer Name": { "type": ["string", "null"] },
+      "PO Quantity": { "type": ["number", "null"] },
+      "GRN Quantity": { "type": ["number", "null"] },
+      "SKU Level Fill Rate": { "type": ["number", "null"] },
+      "PO Qty Fill Rate": { "type": ["number", "null"] },
+      "PO Line Fill Rate": { "type": ["number", "null"] }
+    }
+  }
+  

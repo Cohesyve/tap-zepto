@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+      "City": { "type": ["string", "null"] },
+      "SKU Name": { "type": ["string", "null"] },
+      "SKU Code": { "type": ["string", "null"] },
+      "EAN": { "type": ["string", "null"] },
+      "SKU Category": { "type": ["string", "null"] },
+      "SKU Sub Category": { "type": ["string", "null"] },
+      "Brand Name": { "type": ["string", "null"] },
+      "Manufacturer Name": { "type": ["string", "null"] },
+      "Manufacturer ID": { "type": ["string", "null"] },
+      "Units": { "type": ["number", "null"] }
+    }
+  }
+  

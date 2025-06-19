@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+      "xaxisvalue": {
+        "type": ["string","number", "null"]
+      },
+      "xaxisLabel": {
+        "type": ["string","number", "null"]
+      },
+      "yaxisLabel": {
+        "type": ["string","number", "null"]
+      },
+      "yaxisvalue": {
+        "type": ["string","number", "null"]
+      }
+    }
+  }
+  

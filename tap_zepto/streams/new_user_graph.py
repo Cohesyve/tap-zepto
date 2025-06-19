@@ -12,16 +12,16 @@ from datetime import datetime, timedelta, date # Added date
 
 LOGGER = singer.get_logger()
 
-class MarketShareStream(BaseStream):
+class NewUserStream(BaseStream):
     API_METHOD = 'GET'
-    TABLE = 'overall_conversion'
+    TABLE = 'new_user'
     KEY_PROPERTIES = [ 'yaxisvalue']
     REPLICATION_METHOD = 'INCREMENTAL'
     REPLICATION_KEY = 'start_date'
 
     @property
     def api_path(self):
-        return '/brand-analytics-web/api/v1/market-share/gmv-and-units'
+        return '/brand-analytics-web/api/v1/market-share/get-new-users-percentage'
     
 
     def get_headers(self):
@@ -38,8 +38,7 @@ class MarketShareStream(BaseStream):
                     'subCategoryName': sub_category['subcategoryName']
                 })
         
-        # to_date = date.today().strftime("%Y-%m-%d")
-          # to_date = date.today().strftime("%Y-%m-%d")
+      
         from_date_str = self.config.get('start_date')  # Default start date if no state
         # Ensure state is available in config, default to empty dict if None for get_last_record_value_for_table
         current_state = self.state
@@ -91,15 +90,17 @@ class MarketShareStream(BaseStream):
         }
 
 
-  
+#   
+# 
+# 
     def get_stream_data(self, result):
 
-        dataConfig = result['data']['metrics']['marketShareGMV']['dataConfig']
+        dataConfig = result['data']['metrics']['repeatVsNewUser']['dataConfig']
         # dataConfig = data['data']['metrics']['marketShareGMV']['dataConfig']
         yAxis =dataConfig['yAxis']
         xAxis =dataConfig['xAxis']
 
-        graphData = result['data']['metrics']['marketShareGMV']['data']
+        graphData = result['data']['metrics']['repeatVsNewUser']['data']
 
         finalData=[]
 

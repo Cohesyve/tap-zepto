@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+      "Vendor ID": { "type": ["string", "null"] },
+      "Vendor Name": { "type": ["string", "null"] },
+      "Brand Name": { "type": ["string", "null"] },
+      "Manufacturer Name": { "type": ["string", "null"] },
+      "Manufacturer ID": { "type": ["string", "null"] },
+      "OTIF%": { "type": ["number", "null"] }
+    }
+  }
+  

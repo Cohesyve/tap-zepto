@@ -45,11 +45,11 @@ class BaseStream(base):
 
         return transformed
 
-    def sync_data(self):
+    def sync_data(self,sync_url=None):
         table = self.TABLE
         LOGGER.info('Syncing data for entity {}'.format(table))
 
-        url = self.get_url(self.api_path)
+        url = sync_url if sync_url else self.get_url(self.api_path)
         params = self.get_params()
         body = self.get_body()
 
@@ -124,7 +124,7 @@ class ChildStream(BaseStream):
     #     return self.state
 
 
-    def sync_child_data(self, url=None, params=None, body=None, paginated=False):
+    def sync_child_data(self, url=None, params=None, body=None, paginated=False,context=None):
 
         table = self.TABLE
         LOGGER.info('Syncing data for entity {}'.format(table))
@@ -158,7 +158,7 @@ class ChildStream(BaseStream):
                     current_url, self.API_METHOD, params=params, body=body, headers=headers)
                 
                 result_data = result.json() if paginated else result
-                data = self.get_stream_data(result_data)
+                data = self.get_stream_data(result_data,context=context)
 
                 with singer.metrics.record_counter(endpoint=table) as counter:
                     for obj in data:
