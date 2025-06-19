@@ -10,6 +10,8 @@ setup(name='tap-zepto',
       classifiers=['Programming Language :: Python :: 3 :: Only'],
       py_modules=['tap_zepto'],
       install_requires=[
+          'pandas',
+          'numpy==1.26.4',
           'tap-framework @ git+https://github.com/hotgluexyz/tap-framework.git#egg=tap-framework', # USING THE HOTGLUE VERSION
       ],
       entry_points='''
