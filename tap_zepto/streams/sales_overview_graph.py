@@ -15,7 +15,7 @@ LOGGER = singer.get_logger()
 class SalesOverviewStream(BaseStream):
     API_METHOD = 'GET'
     TABLE = 'sales_overview'
-    KEY_PROPERTIES = [ 'xaxisvalue']
+    KEY_PROPERTIES = [ 'xaxisvalue','yaxisvalue']
     REPLICATION_METHOD = 'INCREMENTAL'
     REPLICATION_KEY = 'start_date'
 
@@ -109,7 +109,8 @@ class SalesOverviewStream(BaseStream):
 
             for y in yAxis:
                 yaxisLabel=y['key']
-                yaxisValue= node.get(yaxisLabel, 0)
+                value = node.get(yaxisLabel)
+                yaxisValue = value if value else 0
                 finalData.append({
                 "xaxisvalue":xaxisValue ,
                 "xaxisLabel":xaxisLabel,

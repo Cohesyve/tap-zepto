@@ -15,7 +15,7 @@ LOGGER = singer.get_logger()
 class OverallConversionStream(BaseStream):
     API_METHOD = 'GET'
     TABLE = 'overall_conversion'
-    KEY_PROPERTIES = [ 'xaxisvalue']
+    KEY_PROPERTIES = [ 'xaxisvalue','yaxisvalue']
     REPLICATION_METHOD = 'INCREMENTAL'
     REPLICATION_KEY = 'start_date'
 
@@ -109,7 +109,11 @@ class OverallConversionStream(BaseStream):
 
             for y in yAxis:
                 yaxisLabel=y['key']
-                yaxisValue= node.get(yaxisLabel, 0)
+                # LOGGER.info
+                value = node.get(yaxisLabel)
+                yaxisValue = value if value else 0
+
+                # yaxisValue= node[yaxisLabel] if node[yaxisLabel] and node[yaxisLabel] is not "null"  else 0
                 finalData.append({
                 "xaxisvalue":xaxisValue ,
                 "xaxisLabel":xaxisLabel,
